@@ -52,9 +52,3 @@ const getClient = () => {
 //     });
 //     return client;
 // }
-
-
-// const region = 'oss-cn-hangzhou'
-// const accessKeyId = 'LTAI5tJqY5Yg3iCQidQUQ6Zc'
-// const accessKeySecret = 'W03e5CBk7Sgm1LwPPB9Y3c686YaqHt'
-// const bucket = 'hincent'
