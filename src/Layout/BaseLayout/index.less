@@ -1,0 +1,308 @@
+@media only screen and (min-width: 750px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    &-layout {
+      width: 320px;
+      height: 100vh;
+      box-sizing: border-box;
+      background: #1A1D1F;
+      padding-top: 31px;
+      overflow-y: scroll;
+      &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 53px;
+        padding-left: 25px;
+        box-sizing: border-box;
+        &-main {
+          width: 240px;
+          height: 36px;
+          background: #313131;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          padding-left: 7px;
+          box-sizing: border-box;
+          margin-right: 15px;
+          font-size: 12px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #ffffff;
+          &-coin {
+            width: 17px;
+            height: 16px;
+            margin-right: 6px;
+          }
+          &-bit {
+            width: 17px;
+            height: 16px;
+            margin-left: 4px;
+            margin-right: 6px;
+          }
+        }
+        &-icon {
+          width: 20px;
+          height: 19px;
+          cursor: pointer;
+        }
+      }
+      &-logo {
+        padding-left: 56px;
+        margin-bottom: 74px;
+        &-img {
+          width: 208px;
+          height: 28px;
+          cursor: pointer;
+        }
+      }
+      &-nav {
+        padding: 0 30px 66px 30px;
+        &-item {
+          height: 45px;
+          padding-left: 4px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #FFFFFF;
+          cursor: pointer;
+          position: relative;
+        }
+        &-item:hover {
+          color: #40a9ff !important;
+        }
+        &-item.active::before {
+          content: '';
+          position: absolute;
+          left: -30px;
+          top: 0;
+          width: 5px;
+          height: 45px;
+          background: #FFFFFF;
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
+      &-other {
+        padding: 0px 30px;
+        &-main {
+          padding-top: 34px;
+          border-top: 1px solid #2A2E33;
+          &-item {
+            height: 16px;
+            font-size: 16px;
+            font-family: Source Han Sans CN;
+            font-weight: 300;
+            color: #FFFFFF;
+            margin-bottom: 26px;
+            cursor: pointer;
+            position: relative;
+          }
+          &-item:hover {
+            color: #40a9ff !important;
+          }
+          &-item.active::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 5px;
+            height: 30px;
+            background: #FFFFFF;
+            border-radius: 0px 5px 5px 0px;
+          }
+        }
+      }
+      &-actions {
+        margin-top: 200px;
+        padding: 0 45px;
+        &-item {
+          width: 230px !important;
+          height: 40px !important;
+          border: 1px solid #FFFFFF !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          font-family: Source Han Sans CN;
+          font-weight: 400;
+          margin-bottom: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    &-layout::-webkit-scrollbar {
+      display: none;
+    }
+    &-main {
+      // flex: 1;
+      width: calc(100vw - 320px);
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  .identity_container,
+  .register_container,
+  .unique_container,  
+  .exchange_container,
+  .casting_container,
+  .mine_container,
+  .identity_container {
+    background-size: cover !important;
+  }
+  .mobile_view {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #1A1D1F;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    &_icon {
+      margin-left: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .mobile-layout {
+    box-sizing: border-box;
+    background: #1A1D1F;
+    overflow-y: scroll;
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      padding-left: 25px;
+      box-sizing: border-box;
+      &-main {
+        width: 100%;
+        height: 36px;
+        background: #313131;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 7px;
+        box-sizing: border-box;
+        margin-right: 15px;
+        font-size: 12px;
+        font-family: Source Han Sans CN;
+        font-weight: 300;
+        color: #ffffff;
+        p {
+          font-size: 24px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #ffffff;
+        }
+        &-coin {
+          width: 17px;
+          height: 16px;
+          margin-right: 6px;
+        }
+        &-bit {
+          width: 17px;
+          height: 16px;
+          margin-left: 38px;
+          margin-right: 6px;
+        }
+      }
+      &-icon {
+        width: 20px;
+        height: 19px;
+      }
+    }
+    &-logo {
+      margin-bottom: 25px;
+      padding: 20px 10% 0 10%;
+      &-img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+    &-nav {
+      padding: 0 30px 66px 30px;
+      &-item {
+        height: 45px;
+        padding-left: 4px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-family: Source Han Sans CN;
+        font-weight: 300;
+        color: #FFFFFF;
+        cursor: pointer;
+        position: relative;
+      }
+      &-item.active::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 5px;
+        height: 45px;
+        background: #FFFFFF;
+        border-radius: 0px 5px 5px 0px;
+      }
+    }
+    &-other {
+      padding: 0px 30px;
+      &-main {
+        padding-top: 34px;
+        border-top: 1px solid #2A2E33;
+        &-item {
+          height: 16px;
+          font-size: 16px;
+          font-family: Source Han Sans CN;
+          font-weight: 300;
+          color: #FFFFFF;
+          margin-bottom: 26px;
+          position: relative;
+          cursor: pointer;
+        }
+        &-item.active::before {
+          content: '';
+          position: absolute;
+          left: -30px;
+          top: 0;
+          width: 5px;
+          height: 30px;
+          background: #FFFFFF;
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
+    }
+    &-actions {
+      margin-top: 200px;
+      padding: 0 45px;
+      &-item {
+        width: 230px !important;
+        height: 40px !important;
+        border: 1px solid #FFFFFF !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .container-main {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}

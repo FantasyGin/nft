@@ -1,0 +1,251 @@
+:global {
+  .identity_container {
+    background-image: url('../../assets/images/identity_bg.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .identity_view {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    &_info {
+      width: 350px;
+      height: 100vh;
+      background: #1A1D1F;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &_logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 38px;
+        &_img {
+          width: 184px;
+          height: 184px;
+          border-radius: 100px;
+        }
+      }
+      &_author {
+        font-size: 24px;
+        font-family: SourceHanSansCN;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 33px;
+        text-align: center;
+      }
+      &_intro {
+        margin: 0 auto 131px auto;
+        width: 170px;
+        height: 52px;
+        line-height: 17px;
+        font-size: 12px;
+        font-family: Source Han Sans CN;
+        font-weight: 300;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      &_price {
+        font-size: 42px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #FFFFFF;
+        width: 200px;
+        padding-bottom: 13px;
+        box-sizing: border-box;
+        margin: 0 auto 103px auto;
+        border-bottom: 1px solid #ffffff;
+        span {
+          font-size: 46px;
+          font-family: 812;
+          font-weight: normal;
+          color: #FFFFFF;
+        }
+      }
+      &_flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &_action {
+        margin: 0 auto !important;
+        width: 240px !important;
+        height: 40px !important;
+        background: linear-gradient(0deg, #E8638F 0%, #EF0A3B 100%) !important;
+        border: none !important;
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px !important;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #FFFFFF !important;
+      }
+    }
+    &_main {
+      width: calc(100vw - 320px - 350px);
+      padding: 779px 43px 100px 73px;
+      position: relative;
+      height: 100vh;
+      overflow-y: scroll;
+      box-sizing: border-box;
+      &_bg {
+        position: absolute;
+        width: 380px;
+        left: 52%;
+        transform: translateX(-50%);
+        top: -60px;
+        z-index: 88;
+      }
+      &_img {
+        position: absolute;
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        z-index: 99;
+      }
+      &_mySwiper {
+        &_item {
+          width: 147px !important;
+          height: 147px !important;
+        }
+        :global {
+          .swiper-slide {
+            width: 147px !important;
+            height: 147px !important;
+          }
+        }
+      }
+    }
+    &_main::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .identity_view::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  .identity_view {
+    background-image: url('../../assets/images/bg.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    position: relative;
+    &_main {
+      text-align: center;
+      position: relative;
+      &_bg {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -60px;
+        z-index: 88;
+      }
+      &_img {
+        width: 50%;
+        margin-bottom: 100px;
+      }
+      &_mySwiper {
+        &_item {
+          width: calc((100vw / 3));
+          height: calc((100vw / 3));
+        }
+        :global {
+          .swiper-slide {
+            width: calc((100vw / 3));
+            height: calc((100vw / 3));
+          }
+        }
+      }
+    }
+    &_info {
+      width: 100%;
+      // background: #1A1D1F;
+      padding-top: 30px;
+      box-sizing: border-box;
+      margin-bottom: 100px;
+      &_logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 38px;
+        &_img {
+          width: 184px;
+          height: 184px;
+          border-radius: 100px;
+        }
+      }
+      &_author {
+        font-size: 24px;
+        font-family: SourceHanSansCN;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 33px;
+        text-align: center;
+      }
+      &_intro {
+        margin: 0 auto 20px auto;
+        width: 170px;
+        height: 52px;
+        line-height: 17px;
+        font-size: 12px;
+        font-family: Source Han Sans CN;
+        font-weight: 300;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      &_price {
+        font-size: 42px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #FFFFFF;
+        width: 200px;
+        padding-bottom: 13px;
+        box-sizing: border-box;
+        margin: 0 auto 103px auto;
+        border-bottom: 1px solid #ffffff;
+        span {
+          font-size: 46px;
+          font-family: 812;
+          font-weight: normal;
+          color: #FFFFFF;
+        }
+      }
+      &_flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &_action {
+        margin: 0 auto !important;
+        width: 240px !important;
+        height: 40px !important;
+        background: linear-gradient(0deg, #E8638F 0%, #EF0A3B 100%) !important;
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px !important;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #FFFFFF !important;
+      }
+    }
+  }
+}
