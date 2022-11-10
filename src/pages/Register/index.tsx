@@ -44,8 +44,10 @@ const Register = () => {
 
   const onFinish = async (values: any) => {
     console.log(values);
+    const nfts = ["636c9a680d31f63ae8006827","636c9a900d31f63ae8006829"];
     const data = {
-      ...values
+      ...values,
+      nfts
     }
     setLoading(true);
     await doRequest(`/user/create`, "post", data);

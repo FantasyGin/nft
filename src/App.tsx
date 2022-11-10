@@ -33,6 +33,7 @@ function App() {
             <Route path="/page/casting" element={<Casting />} />
             <Route path="/page/register" element={<Register />} />
             <Route path="/page/unique" element={<Unique />} />
+            <Route path="/page/unique/:id" element={<Unique />} />
             <Route path="/page/identity" element={<Identity />} />
             <Route path="/page/governance" element={<Governance />} />
             <Route path="/page/blindBox" element={<BlindBox />} />
