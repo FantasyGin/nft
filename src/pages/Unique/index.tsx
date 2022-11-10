@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Input, Select, Upload, message, Button, Form } from "antd";
+import { Input, Select, Upload, message, Button, Form, Row, Col } from "antd";
 
 import {
   InboxOutlined,
@@ -132,65 +132,151 @@ const Unique = () => {
         <Form
           form={form}
           autoComplete="off"
-          layout="vertical"
-          style={{
-            width: "600px",
-          }}
+          layout="vertical"          
           onFinish={onFinish}
         >
-          <Form.Item label={<strong>上传文件</strong>} name="file">
-            <UploadFile
-              imageUrl={file}
-              onChange={(value: any) => {
-                form.setFieldsValue({
-                  file: value,
-                });
-                setFile(value);
-              }}
-              onClear={() => {
-                form.setFieldsValue({
-                  file: "",
-                });
-                setFile("");
-              }}
-              accept="image/*"
-            />
-          </Form.Item>
-          <Form.Item label={<strong>上传封面</strong>} name="logo">
-            <UploadFile
-              imageUrl={logo}
-              onChange={(value: any) => {
-                form.setFieldsValue({
-                  logo: value,
-                });
-                setLogo(value);
-              }}
-              onClear={() => {
-                form.setFieldsValue({
-                  logo: "",
-                });
-                setLogo("");
-              }}
-              accept="image/*"
-            />
-          </Form.Item>
-          <Form.Item label={<strong>出售价格</strong>} name="price">
+          <Row>
+            <Col span={12}>
+              <Form.Item
+                label={
+                  <strong
+                    style={{
+                      color: "#ffffff",
+                    }}
+                  >
+                    上传文件
+                  </strong>
+                }
+                name="file"
+                extra={
+                  <p
+                    style={{
+                      color: "#ffffff",
+                    }}
+                  >
+                    （ PNG,JPEG,GIF，ZIP，最大500MB ）
+                  </p>
+                }
+              >
+                <UploadFile
+                  imageUrl={file}
+                  onChange={(value: any) => {
+                    form.setFieldsValue({
+                      file: value,
+                    });
+                    setFile(value);
+                  }}
+                  onClear={() => {
+                    form.setFieldsValue({
+                      file: "",
+                    });
+                    setFile("");
+                  }}
+                  accept="image/*"
+                />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+              <Form.Item
+                label={
+                  <strong
+                    style={{
+                      color: "#ffffff",
+                    }}
+                  >
+                    上传封面
+                  </strong>
+                }
+                name="logo"
+                extra={
+                  <p
+                    style={{
+                      color: "#ffffff",
+                    }}
+                  >
+                    ( 支持JPEG、PNG图片文件，文件大小 2MB以内 )
+                  </p>
+                }
+              >
+                <UploadFile
+                  imageUrl={logo}
+                  onChange={(value: any) => {
+                    form.setFieldsValue({
+                      logo: value,
+                    });
+                    setLogo(value);
+                  }}
+                  onClear={() => {
+                    form.setFieldsValue({
+                      logo: "",
+                    });
+                    setLogo("");
+                  }}
+                  accept="image/*"
+                />
+              </Form.Item>
+            </Col>
+          </Row>
+
+          <Form.Item
+            label={
+              <strong
+                style={{
+                  color: "#ffffff",
+                }}
+              >
+                出售价格
+              </strong>
+            }
+            name="price"
+          >
             <Input
               placeholder="出售价格"
               className={styles.register_view_nickname}
+              style={{
+                width:'300px'
+              }}
             />
           </Form.Item>
-          <Form.Item label={<strong>NFT名称</strong>} name="name">
+          <Form.Item
+            label={
+              <strong
+                style={{
+                  color: "#ffffff",
+                }}
+              >
+                NFT名称
+              </strong>
+            }
+            name="name"
+          >
             <Input
               placeholder="NFT名称"
               className={styles.register_view_nickname}
+              style={{
+                width:'300px'
+              }}
             />
           </Form.Item>
-          <Form.Item label={<strong>NFT介绍</strong>} name="description">
+          <Form.Item
+            label={
+              <strong
+                style={{
+                  color: "#ffffff",
+                }}
+              >
+                NFT介绍
+              </strong>
+            }
+            name="description"
+          >
             <TextArea
               placeholder="NFT介绍"
               className={styles.register_view_intro}
               rows={7}
+              style={{
+                width:'500px'
+              }}
             />
           </Form.Item>
           <Form.Item className="margin-16">
